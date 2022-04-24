@@ -1,0 +1,22 @@
+.topic {
+    padding: 1rem;
+    margin: 1rem;
+    background: bisque;
+    border-radius: 1rem;
+
+    h1 {
+        text-align: center
+    }
+
+    p {
+        margin: 1rem 0;
+    }
+}
+
+.topic_detail {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 50%;
+}

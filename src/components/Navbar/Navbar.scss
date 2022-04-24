@@ -1,0 +1,39 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  background-color: rgb(182, 182, 182);
+  box-shadow: 0 0.5rem 1rem black;
+  margin-bottom: 1rem;
+}
+
+.logo {
+  color: rgb(255, 255, 255);
+}
+
+.nav_links {
+  text-transform: uppercase;
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+
+    li {
+      margin: 0 1rem;
+
+      a {
+        text-decoration: none;
+        font-size: 1rem;
+        cursor: pointer;
+        color: rgb(255, 255, 255);
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

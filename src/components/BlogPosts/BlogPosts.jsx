@@ -8,7 +8,7 @@ const BlogPost = () => {
   const [blogPosts, setBlogPosts] = useState([]);
 
   useEffect(() => {
-    Axios.get("http://localhost:5000/posts").then((response) => {
+    Axios.get("https://react-blog-v1.herokuapp.com/posts").then((response) => {
       setBlogPosts(response.data);
     });
   }, []);

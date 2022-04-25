@@ -23,7 +23,7 @@ const Compose = () => {
   function submitBlog(event) {
     event.preventDefault();
 
-    Axios.post("http://localhost:5000/posts", blog).then((response) => {
+    Axios.post("https://react-blog-v1.herokuapp.com/posts", blog).then((response) => {
       console.log("User Created");
     });
 

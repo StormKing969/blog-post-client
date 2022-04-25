@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import Axios from "axios";
+import { Link } from "react-router-dom";
 import "./SingleBlog.scss";
 
 const SingleBlog = () => {
@@ -8,7 +9,7 @@ const SingleBlog = () => {
   const currentURL = window.location.pathname;
 
   useEffect(() => {
-    Axios.get("http://localhost:5000/posts/" + currentURL).then((response) => {
+    Axios.get("https://react-blog-v1.herokuapp.com/posts/" + currentURL).then((response) => {
       setBlog(response.data);
     });
   }, [currentURL]);
@@ -21,16 +22,30 @@ const SingleBlog = () => {
 
   return (
     <div className="topic">
-      <h1>{blog.title}</h1>
+      {blog.title ? (
+        <>
+          <h1>{blog.title}</h1>
 
-      <p>{blog.content}</p>
+          <p>{blog.content}</p>
 
-      <div className="topic_detail">
-        <h4>{blog.creator}</h4>
-        <h4>
-          {day} {month} {year}
-        </h4>
-      </div>
+          <div className="topic_detail">
+            <h4>{blog.creator}</h4>
+            <h4>
+              {day} {month} {year}
+            </h4>
+          </div>
+        </>
+      ) : (
+        <>
+          <h1>{blog.title}</h1>
+
+          <p>Invalid Link</p>
+
+          <div className="topic_detail">
+            <Link to="/">Back To Homepage</Link>
+          </div>
+        </>
+      )}
     </div>
   );
 };

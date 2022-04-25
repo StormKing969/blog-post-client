@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Topic.scss";
 
 const Topic = (props) => {
@@ -24,7 +25,7 @@ const Topic = (props) => {
 
       <p>{truncate(props.content, 100)}</p>
 
-      <a href={singleBlogURL}>Read More</a>
+      <Link to={singleBlogURL}>Read More</Link>
 
       <div className="creator_detail">
         <h4>{props.creator}</h4>

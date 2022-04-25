@@ -9,7 +9,7 @@ const SingleBlog = () => {
   const currentURL = window.location.pathname;
 
   useEffect(() => {
-    Axios.get("https://react-blog-v1.herokuapp.com/posts/post/" + currentURL).then((response) => {
+    Axios.get("https://react-blog-v1.herokuapp.com/posts/post" + currentURL).then((response) => {
       setBlog(response.data);
     });
   }, [currentURL]);

@@ -17,7 +17,7 @@ const Topic = (props) => {
   let month = date.toLocaleString("default", { month: "short" });
   let year = date.getFullYear();
 
-  const singleBlogURL = "/post/" + props.title;
+  const singleBlogURL = "/" + props.title;
 
   return (
     <div className="topic_container">

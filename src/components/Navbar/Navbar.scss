@@ -1,17 +1,23 @@
+@import "../../shared/styles/variables";
+
 .navbar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
-  background-color: rgb(182, 182, 182);
-  box-shadow: 0 0.5rem 1rem black;
+  background-color: $navbar-bg;
+  box-shadow: 0 0.5rem 1rem $navbar-shadow;
   margin-bottom: 1rem;
 }
 
 .logo {
   a {
-    color: rgb(255, 255, 255);
+    color: $navbar-text;
+
+    &:hover {
+      color: $navbar-text-hover;
+    }
   }
 }
 
@@ -29,10 +35,11 @@
       a {
         font-size: 1rem;
         cursor: pointer;
-        color: rgb(255, 255, 255);
+        color: $navbar-text;
 
         &:hover {
           text-decoration: underline;
+          color: $navbar-text-hover;
         }
       }
     }

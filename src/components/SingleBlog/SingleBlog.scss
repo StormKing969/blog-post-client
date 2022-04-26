@@ -1,8 +1,13 @@
+@import "../../shared/styles/variables";
+
 .topic {
     padding: 1rem;
-    margin: 1rem;
-    background: bisque;
+    margin: calc(100vh - 75vh);
+    background: $single-topic-bg;
     border-radius: 1rem;
+    box-shadow: 0 0rem 10rem $single-topic-bg-shadow;
+    color: $single-topic-text-color;
+
 
     h1 {
         text-align: center
@@ -18,5 +23,5 @@
     flex-direction: row;
     justify-content: space-between;
     margin: 0 auto;
-    width: 50%;
+    width: 90%;
 }

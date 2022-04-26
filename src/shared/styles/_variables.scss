@@ -1,0 +1,35 @@
+// Color Scheme
+// color 1: hsl(239, 94, 19)
+// color 2: hsl(201, 100, 36)
+// color 3: hsl(190, 100, 42)
+// color 4: hsl(189, 75, 75)
+// color 5: hsl(190, 77, 88)
+
+// App
+$app-bg: hsl(189, 75, 75);
+$min-screen-width: 375px;
+
+// Navbar
+$navbar-bg: hsl(201, 100, 36);
+$navbar-shadow: hsl(239, 94, 19);
+$navbar-text: hsl(189, 75, 75);
+$navbar-text-hover: hsl(190, 77, 88);
+
+// Blog Topic
+$blog-topic-bg: hsl(239, 94, 19);
+$blog-topic-shadow: hsl(201, 100, 36);
+$blog-topic-text-color: hsl(189, 75, 75);
+$blog-topic-text-color-hover: hsl(190, 77, 88);
+
+// Single Topic
+$single-topic-bg: hsl(201, 100, 36);
+$single-topic-bg-shadow: hsl(239, 94, 19);
+$single-topic-text-color: hsl(189, 75, 75);
+
+// Error
+$error-text-color: hsl(201, 100, 36);
+$error-link-color: hsl(239, 94, 19);
+$error-link-color-hover: hsl(190, 77, 88);
+
+// Footer
+$footer-text-color: hsl(190, 77, 88);

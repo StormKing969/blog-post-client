@@ -5,6 +5,8 @@ import Footer from "../Footer/Footer";
 import Compose from "../Compose/Compose";
 import BlogPosts from "../BlogPosts/BlogPosts";
 import SingleBlog from "../SingleBlog/SingleBlog";
+import Error from "../Error/Error";
+import About from "../About/About";
 import "./App.scss";
 
 function App() {
@@ -13,9 +15,11 @@ function App() {
       <div className="App">
         <Navbar />
         <Routes>
-          <Route path="/" element={<BlogPosts />} />
+          <Route exact path="/" element={<BlogPosts />} />
           <Route path="/:topicID/:topic" element={<SingleBlog />} />
-          <Route path="/compose" element={<Compose />} />
+          <Route exact path="/compose" element={<Compose />} />
+          <Route exact path="/about" element={<About />} />
+          <Route exact path="*" element={<Error />} />
         </Routes>
         <Footer />
       </div>

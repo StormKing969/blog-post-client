@@ -1,0 +1,16 @@
+@import "../../shared/styles/variables";
+
+.error_container {
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    color: $error-text-color;
+
+    a {
+        color: $error-link-color;
+
+        &:hover {
+            color: $error-link-color-hover;
+        }
+    }
+}

@@ -1,6 +1,25 @@
+@import "../../shared/styles/variables";
+
 .blog_post {
+  position: relative;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto auto auto;
   gap: 1rem;
   padding: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 810px) {
+  .blog_post {
+    grid-template-columns: auto auto;
+  }
+  
+}
+
+@media screen and (max-width: 610px) {
+  .blog_post {
+    grid-template-columns: auto;
+  }
+  
 }

@@ -14,7 +14,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<BlogPosts />} />
-          <Route path="/:topic" element={<SingleBlog />} />
+          <Route path="/:topicID/:topic" element={<SingleBlog />} />
           <Route path="/compose" element={<Compose />} />
         </Routes>
         <Footer />

@@ -23,9 +23,11 @@ const Compose = () => {
   function submitBlog(event) {
     event.preventDefault();
 
-    Axios.post("https://react-blog-v1.herokuapp.com/posts", blog).then((response) => {
-      console.log("User Created");
-    });
+    Axios.post("https://react-blog-v1.herokuapp.com/posts", blog).then(
+      (response) => {
+        console.log("User Created");
+      }
+    );
 
     setBlog({
       title: "",

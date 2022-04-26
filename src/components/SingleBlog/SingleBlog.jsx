@@ -7,12 +7,23 @@ import "./SingleBlog.scss";
 const SingleBlog = () => {
   const [blog, setBlog] = useState([]);
   const currentURL = window.location.pathname;
+  currentURL.slice(1);
 
   useEffect(() => {
-    Axios.get("https://react-blog-v1.herokuapp.com/posts/post" + currentURL).then((response) => {
+    Axios.get(
+      "https://react-blog-v1.herokuapp.com/posts/post" + currentURL
+    ).then((response) => {
       setBlog(response.data);
     });
   }, [currentURL]);
+
+  // console.log(currentURL);
+
+  // useEffect(() => {
+  //   Axios.get("http://localhost:5000/posts/post" + currentURL).then((response) => {
+  //     setBlog(response.data);
+  //   });
+  // }, [currentURL]);
 
   let date = new Date(blog.createdAt);
 

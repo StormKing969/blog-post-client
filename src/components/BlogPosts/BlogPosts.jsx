@@ -13,12 +13,19 @@ const BlogPost = () => {
     });
   }, []);
 
+  // useEffect(() => {
+  //   Axios.get("http://localhost:5000/posts").then((response) => {
+  //     setBlogPosts(response.data);
+  //   });
+  // }, []);
+
   return (
     <div className="blog_post">
       {blogPosts.map((item) => {
         return (
           <Topic
             key={item._id}
+            id={item._id}
             title={item.title}
             content={item.content}
             createdAt={item.createdAt}

@@ -7,6 +7,7 @@ const Compose = () => {
     title: "",
     content: "",
     creator: "",
+    featured: false
   });
 
   function getUserInput(event) {
@@ -33,6 +34,7 @@ const Compose = () => {
       title: "",
       content: "",
       creator: "",
+      featured: false
     });
   }
 
@@ -43,12 +45,14 @@ const Compose = () => {
           type="text"
           name="title"
           placeholder="Title"
+          autoComplete="off"
           onChange={getUserInput}
         />
         <textarea
           type="text"
           name="content"
           placeholder="Content"
+          autoComplete="off"
           onChange={getUserInput}
           rows={5}
         />
@@ -56,8 +60,27 @@ const Compose = () => {
           type="text"
           name="creator"
           placeholder="Creator"
+          autoComplete="off"
           onChange={getUserInput}
         />
+        <div>
+        <input
+          type="radio"
+          name="featured"
+          value="true"
+          placeholder="Creator"
+          onChange={getUserInput}
+        />
+        <label htmlFor="true">True</label>
+        <input
+          type="radio"
+          name="featured"
+          value="false"
+          placeholder="Creator"
+          onChange={getUserInput}
+        />
+        <label htmlFor="false">False</label>
+        </div>
         <button onClick={submitBlog}>Compose</button>
       </form>
     </div>

@@ -1,12 +1,15 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Navbar from "../Navbar/Navbar";
-import Footer from "../Footer/Footer";
-import Compose from "../Compose/Compose";
-import BlogPosts from "../BlogPosts/BlogPosts";
-import SingleBlog from "../SingleBlog/SingleBlog";
-import Error from "../Error/Error";
+import Logo from "../Logo/Logo";
+import Welcome from "../Welcome/Welcome";
 import About from "../About/About";
+import Contact from "../Contact/Contact";
+import BlogPosts from "../BlogPosts/BlogPosts";
+import SingleBlog from "../BlogPosts/SingleBlog/SingleBlog";
+import Compose from "../Compose/Compose";
+import Error from "../Error/Error";
+import Footer from "../Footer/Footer";
 import "./App.scss";
 
 function App() {
@@ -14,11 +17,14 @@ function App() {
     <Router>
       <div className="App">
         <Navbar />
+        <Logo />
         <Routes>
-          <Route exact path="/" element={<BlogPosts />} />
+          <Route exact path="/" element={<Welcome />} />
+          <Route exact path="/about" element={<About />} />
+          <Route exact path="/contact" element={<Contact />} />
+          <Route exact path="/blog" element={<BlogPosts />} />
           <Route path="/:topicID/:topic" element={<SingleBlog />} />
           <Route exact path="/compose" element={<Compose />} />
-          <Route exact path="/about" element={<About />} />
           <Route exact path="*" element={<Error />} />
         </Routes>
         <Footer />

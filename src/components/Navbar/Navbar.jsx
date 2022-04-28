@@ -1,32 +1,60 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { GoMail } from "react-icons/go";
+import { FaLinkedinIn } from "react-icons/fa";
+import { FaFacebookF } from "react-icons/fa";
+import { BsInstagram } from "react-icons/bs";
 import "./Navbar.scss";
 
 const Navbar = () => {
   return (
-    <div className="navbar">
-      <div className="logo">
+    <div className="navbar_container">
+      <div className="navbar">
+      <div className="nav_links">
         <NavLink end to="/">
-          <h1>DAILY JOURNAL</h1>
+          WELCOME
+        </NavLink>
+        <NavLink end to="/about">
+          ABOUT
+        </NavLink>
+        <NavLink end to="/contact">
+          CONTACT
+        </NavLink>
+        <NavLink end to="/blog">
+          BLOG
         </NavLink>
       </div>
 
-      <div className="nav_links">
-        <ul>
-          <li>
-            <NavLink end to="/">
-              HOME
-            </NavLink>
-          </li>
-          <li>
-            <NavLink end to="/about">
-              ABOUT
-            </NavLink>
-          </li>
-          <li>
-            <a href="https://sajana-wijesinghe.com/">PERSONAL WEBSITE</a>
-          </li>
-        </ul>
+      <div className="nav_icons">
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.linkedin.com/in/sajana-wijesinghe"
+        >
+          <GoMail />
+        </a>
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.linkedin.com/in/sajana-wijesinghe"
+        >
+          <BsInstagram />
+        </a>
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.linkedin.com/in/sajana-wijesinghe"
+        >
+          <FaLinkedinIn />
+        </a>
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.linkedin.com/in/sajana-wijesinghe"
+        >
+          <FaFacebookF />
+        </a>
+      </div>
       </div>
     </div>
   );

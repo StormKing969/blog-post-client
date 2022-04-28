@@ -1,25 +1,47 @@
 @import "../../shared/styles/variables";
 
-.blog_post {
-  position: relative;
+.blog_posts {
   display: grid;
   grid-template-columns: auto auto auto;
   gap: 1rem;
   padding: 1rem;
+  margin: 0 auto;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  max-width: $max-screen-width;
+  scroll-behavior: smooth;
+}
+
+.custom_slider {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto 0;
+}
+
+.swiper {
+  width: 30rem;
+  max-width: $max-screen-width;
+}
+
+.swiper-button-next::after {
+  font-size: 2rem !important;
+}
+
+.swiper-button-prev::after {
+  font-size: 2rem !important;
 }
 
 @media screen and (max-width: 810px) {
   .blog_post {
     grid-template-columns: auto auto;
   }
-  
 }
 
 @media screen and (max-width: 610px) {
   .blog_post {
     grid-template-columns: auto;
   }
-  
 }

@@ -1,0 +1,39 @@
+@import "../../../shared/styles/variables";
+
+.featured_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: $blog-topic-bg;
+    border-radius: 1rem;
+    padding: 0 1rem;
+    max-width: 30rem;
+    height: max-content;
+    box-shadow: 0 0.5rem 1rem $blog-topic-shadow;
+    margin: 0 1rem 1rem;
+    color: $blog-topic-text-color;
+  
+    h1 {
+      align-self: center;
+      margin: 1rem 0;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+  
+    a {
+        color: $blog-topic-text-color;
+        text-decoration: none;
+        margin: 1rem 0 .2rem;
+  
+        &:hover {
+            color: $blog-topic-text-color-hover;
+        }
+    }
+  }
+  
+  .featured_creator_detail {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+  }

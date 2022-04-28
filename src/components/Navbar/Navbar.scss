@@ -1,47 +1,37 @@
 @import "../../shared/styles/variables";
 
+.navbar_container {
+  background-color: $navbar-bg;
+}
+
 .navbar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem;
+  padding: .5rem 0;
   background-color: $navbar-bg;
-  box-shadow: 0 0.5rem 1rem $navbar-shadow;
-  margin-bottom: 1rem;
+  font-weight: $bold;
+  font-size: .9rem;
+  max-width: $max-screen-width;
+  margin: 0 auto;
 }
 
-.logo {
+.nav_links {
+  
   a {
-    color: $navbar-text;
+    margin: 1rem;
 
     &:hover {
-      color: $navbar-text-hover;
+      text-decoration: underline;
     }
   }
 }
 
-.nav_links {
-  text-transform: uppercase;
+.nav_icons {
+  margin-right: 1rem;
 
-  ul {
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-
-    li {
-      margin: 0 1rem;
-
-      a {
-        font-size: 1rem;
-        cursor: pointer;
-        color: $navbar-text;
-
-        &:hover {
-          text-decoration: underline;
-          color: $navbar-text-hover;
-        }
-      }
-    }
+  a {
+    margin: .2rem;
   }
 }
